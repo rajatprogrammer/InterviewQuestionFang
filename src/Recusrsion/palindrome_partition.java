@@ -2,7 +2,6 @@ package Recusrsion;
 
 import java.util.ArrayList;
 import java.util.List;
-
 //https://leetcode.com/problems/palindrome-partitioning/
 //amazon
 public class palindrome_partition {
