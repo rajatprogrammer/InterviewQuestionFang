@@ -8,6 +8,7 @@ public class distinctSubsequence {
 		String T = "ge";
 		String S = "geeksforgeeks";
 		System.out.println(findSubsequenceCount(S, T));
+		System.out.println(recursive(S, T, 0, 0));
 	}
 
 	static int findSubsequenceCount(String S, String T) {
@@ -56,6 +57,20 @@ public class distinctSubsequence {
 		 * for (int j = 1; j <= n; j++) System.out.println ( mat[i][j] +" ");
 		 */
 		return mat[m][n];
+	}
+	
+	static int recursive(String T,String S,int t,int s) {
+		if((t==T.length() && s==S.length() )|| s==S.length()) {
+			return 1;
+		}
+		else if(t>=T.length()) {
+			return 0;
+		}
+		if(S.charAt(s)==T.charAt(t)) {
+			return (recursive(T,S,t+1,s+1) + recursive(T, S, t+1, s));
+		}else {
+			return(recursive(T, S, t+1, s));
+		}
 	}
 
 }
