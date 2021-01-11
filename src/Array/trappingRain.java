@@ -1,5 +1,6 @@
 package Array;
 //https://www.geeksforgeeks.org/trapping-rain-water/
+//https://leetcode.com/problems/trapping-rain-water/
 public class trappingRain {
 
 	public static void main(String[] args) {
