@@ -31,7 +31,7 @@ public class String_k {
 	            if(A[i] == B[j] && B[j] != A[j]) {
 	                swap(B, i, j); // Let's fix B, we can also fix A by changing above condition to A[j] == B[i]
 	                result = Math.min(result, DFS(A, B, i + 1, count + 1));
-	                swap(B, i, j);
+	                swap(B, i, j);//backtracking
 	            }
 	        }
 	        
